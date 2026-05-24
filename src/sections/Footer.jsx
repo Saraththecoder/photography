@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUp, MessageSquare } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logoImg from '../assets/logo.jpg';
 
 const InstagramIcon = ({ className }) => (
@@ -29,23 +30,6 @@ export const Footer = () => {
     });
   };
 
-  const handleLinkClick = (e, id) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -57,9 +41,8 @@ export const Footer = () => {
           
           {/* Column 1: Editorial Branding */}
           <div className="md:col-span-5 flex flex-col gap-6">
-            <a 
-              href="#home" 
-              onClick={(e) => handleLinkClick(e, 'home')}
+            <Link 
+              to="/" 
               className="flex items-center gap-2.5 group cursor-pointer"
             >
               <img 
@@ -75,7 +58,7 @@ export const Footer = () => {
                   Photography
                 </span>
               </div>
-            </a>
+            </Link>
             <p className="text-[11px] text-silver/60 font-light leading-relaxed max-w-xs">
               Luxury cinematic photography for couples who value poetry in images, raw emotional moments, and fine-art editorial craftsmanship.
             </p>
@@ -93,42 +76,37 @@ export const Footer = () => {
               Explore Portfolio
             </h4>
             <div className="grid grid-cols-2 gap-y-2.5 gap-x-4">
-              <a 
-                href="#home" 
-                onClick={(e) => handleLinkClick(e, 'home')}
+              <Link 
+                to="/" 
                 className="text-[11px] text-silver/80 hover:text-soft-white tracking-widest uppercase font-light transition-colors duration-300 cursor-pointer"
               >
                 Home
-              </a>
-              <a 
-                href="#about" 
-                onClick={(e) => handleLinkClick(e, 'about')}
+              </Link>
+              <Link 
+                to="/about" 
                 className="text-[11px] text-silver/80 hover:text-soft-white tracking-widest uppercase font-light transition-colors duration-300 cursor-pointer"
               >
                 About
-              </a>
-              <a 
-                href="#gallery" 
-                onClick={(e) => handleLinkClick(e, 'gallery')}
+              </Link>
+              <Link 
+                to="/gallery" 
                 className="text-[11px] text-silver/80 hover:text-soft-white tracking-widest uppercase font-light transition-colors duration-300 cursor-pointer"
               >
                 Gallery
-              </a>
+              </Link>
 
-              <a 
-                href="#services" 
-                onClick={(e) => handleLinkClick(e, 'services')}
+              <Link 
+                to="/services" 
                 className="text-[11px] text-silver/80 hover:text-soft-white tracking-widest uppercase font-light transition-colors duration-300 cursor-pointer"
               >
                 Services
-              </a>
-              <a 
-                href="#booking" 
-                onClick={(e) => handleLinkClick(e, 'booking')}
+              </Link>
+              <Link 
+                to="/inquire" 
                 className="text-[11px] text-silver/80 hover:text-soft-white tracking-widest uppercase font-light transition-colors duration-300 cursor-pointer"
               >
                 Inquire
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -1,25 +1,36 @@
 // Yarlagadda Photography - Premium Visual Asset Configuration
-// Centralized image mapping for your actual 15 high-resolution photography assets.
+// Centralized image mapping for your actual 25 high-resolution photography assets.
 
-import img3444 from '../assets/PRPG3444.jpg';
-import img3458 from '../assets/PRPG3458.jpg';
-import img3471 from '../assets/PRPG3471.jpg';
-import img3566 from '../assets/PRPG3566.jpg';
-import img3567 from '../assets/PRPG3567.jpg';
-import img3634 from '../assets/PRPG3634.jpg';
-import img3636 from '../assets/PRPG3636.jpg';
-import img3682 from '../assets/PRPG3682.jpg';
-import img3789 from '../assets/PRPG3789.jpg';
-import img3817 from '../assets/PRPG3817.jpg';
-import img3041 from '../assets/SMD_3041.jpg';
-import img3082 from '../assets/SMD_3082.jpg';
-import img3096 from '../assets/SMD_3096.jpg';
-import img3106 from '../assets/SMD_3106.jpg';
+import img176 from '../assets/YR400176.JPG';
+import img179 from '../assets/YR400179.JPG';
+import img189 from '../assets/YR400189.JPG';
+import img201 from '../assets/YR400201.JPG';
+import img208 from '../assets/YR400208.JPG';
+import img210 from '../assets/YR400210.JPG';
+import img215 from '../assets/YR400215.JPG';
+import img233 from '../assets/YR400233.JPG';
+import img238 from '../assets/YR400238.JPG';
+import img267 from '../assets/YR400267.JPG';
+import img272 from '../assets/YR400272.JPG';
+import img284 from '../assets/YR400284.JPG';
+import img305 from '../assets/YR400305.JPG';
+import img313 from '../assets/YR400313.JPG';
+import img316 from '../assets/YR400316.JPG';
+import img339 from '../assets/YR400339.JPG';
+import img348 from '../assets/YR400348.JPG';
+import img357 from '../assets/YR400357.JPG';
+import img365 from '../assets/YR400365.JPG';
+import img433 from '../assets/YR400433.JPG';
+import img436 from '../assets/YR400436.JPG';
+import img456 from '../assets/YR400456.JPG';
+import img460 from '../assets/YR400460.JPG';
+import img463 from '../assets/YR400463.JPG';
+import img469 from '../assets/YR400469.JPG';
 
 export const portfolioImages = {
   // 1. Flagship Fullscreen Hero Image
   hero: {
-    url: img3444,
+    url: img469,
     title: "Yarlagadda Photography",
     tagline: "Capturing Emotions Beyond Time",
     description: "Every Frame Tells a Story"
@@ -28,13 +39,13 @@ export const portfolioImages = {
   // 2. Featured Cinematic Showcase (Apple-Style Parallax Scroll Slides)
   showcase: [
     {
-      url: img3444,
+      url: img463,
       title: "The Silent Symphony",
       subtitle: "Cinematic Highlight",
       description: "A timeless couple gaze suspended in rich color-graded warm light."
     },
     {
-      url: img3817,
+      url: img456,
       title: "Archival Reflections",
       subtitle: "Parallax Masterpiece",
       description: "Playing with subtle ambient flares, deep matte contrast, and high editorial sharpness."
@@ -43,103 +54,159 @@ export const portfolioImages = {
 
   // 3. Categorized Portfolio Grid Elements
   gallery: [
-    // --- Wedding Section (4 emotional images) ---
+    // --- Wedding Section ---
     {
       id: "wedding-1",
       category: "wedding",
-      url: img3458,
-      title: "Intimate Glances",
-      caption: "Candid closeup capture of deep emotional connections."
+      url: img176,
+      title: "Silent Promises",
+      caption: "Capturing a quiet moment of pure, warm couple embrace."
     },
     {
       id: "wedding-2",
       category: "wedding",
-      url: img3471,
-      title: "Timeless Vows",
-      caption: "Spontaneous smiles and warm ambient light."
+      url: img179,
+      title: "Vibrant Ceremonies",
+      caption: "Preserving historical cultural rituals and ecstatic family joy."
     },
     {
       id: "wedding-3",
       category: "wedding",
-      url: img3566,
-      title: "The Sacred Promise",
-      caption: "A quiet moment of traditional couple embrace."
+      url: img189,
+      title: "The Grand Celebration",
+      caption: "Spontaneous smiles and warm luxury ambient light."
     },
     {
       id: "wedding-4",
       category: "wedding",
-      url: img3567,
-      title: "Ethereal Graces",
-      caption: "Bridal portrait showcasing high-contrast luxury shadows."
+      url: img201,
+      title: "Intimate Glances",
+      caption: "A quiet exchange of vows suspended in high-contrast light."
+    },
+    {
+      id: "wedding-5",
+      category: "wedding",
+      url: img208,
+      title: "Traditional Heritage",
+      caption: "Candid detail capture of rich rituals and vows."
+    },
+    {
+      id: "wedding-6",
+      category: "wedding",
+      url: img210,
+      title: "Bridal Graces",
+      caption: "Bridal portrait showcasing delicate luxury shadows."
     },
 
-    // --- Portrait Section (3 luxury editorial images) ---
+    // --- Portrait Section ---
     {
       id: "portrait-1",
       category: "portrait",
-      url: img3041,
-      title: "Sleek Contrast",
+      url: img215,
+      title: "Sleek Editorial",
       caption: "Clean editorial framing capturing soft cinematic shadows."
     },
     {
       id: "portrait-2",
       category: "portrait",
-      url: img3082,
-      title: "The Storyteller",
+      url: img233,
+      title: "Matte Highlights",
       caption: "Editorial studio close-up lit with soft silver highlights."
     },
     {
       id: "portrait-3",
       category: "portrait",
-      url: img3096,
-      title: "Refined Shadows",
+      url: img238,
+      title: "The Storyteller",
       caption: "Timeless portrait playing with deep matte-black tones."
     },
+    {
+      id: "portrait-4",
+      category: "portrait",
+      url: img267,
+      title: "Modern Poise",
+      caption: "Precision lighting and high-end personal branding concept."
+    },
+    {
+      id: "portrait-5",
+      category: "portrait",
+      url: img272,
+      title: "Refined Contrast",
+      caption: "Cinematic portrait showcasing dramatic, magazine-quality shapes."
+    },
 
-    // --- Outdoor / Cinematic Section (3 wide layouts) ---
+    // --- Outdoor / Cinematic Section ---
     {
       id: "cinematic-1",
       category: "cinematic",
-      url: img3817,
-      title: "Timeless Shadows",
-      caption: "A magnificent cinematic capture of soft ambient textures and forms."
+      url: img284,
+      title: "Golden Hour Symphony",
+      caption: "Expansive couple narrative during stunning sunset twilight."
     },
     {
       id: "cinematic-2",
       category: "cinematic",
-      url: img3634,
-      title: "Nature's Sanctuary",
-      caption: "A wide outdoor couple narrative during golden sunset hour."
+      url: img305,
+      title: "Whispering Wilds",
+      caption: "A quiet moment of candid emotional heartbeat in nature."
     },
     {
       id: "cinematic-3",
       category: "cinematic",
-      url: img3636,
-      title: "The Whispering Wilds",
-      caption: "Archival landscape storytelling framing frozen in time."
+      url: img313,
+      title: "Archival Flares",
+      caption: "Subtle lens flares adding poetry and grand scale to the landscape."
+    },
+    {
+      id: "cinematic-4",
+      category: "cinematic",
+      url: img316,
+      title: "Infinite Horizons",
+      caption: "A magnificent capture of spatial contours and wilderness textures."
+    },
+    {
+      id: "cinematic-5",
+      category: "cinematic",
+      url: img339,
+      title: "Ethereal Gradients",
+      caption: "Couple journey suspended in dreamy, soft natural light."
     },
 
-    // --- Traditional / Event Section (3 vibrant cultural event images) ---
+    // --- Traditional / Event Section ---
     {
       id: "traditional-1",
       category: "traditional",
-      url: img3106,
-      title: "Cultural Haldi",
-      caption: "Preserving vibrant traditional colors and ecstatic family joy."
+      url: img348,
+      title: "Cultural Haldi Splash",
+      caption: "Vivid yellow colors and dynamic movement of family smiles."
     },
     {
       id: "traditional-2",
       category: "traditional",
-      url: img3682,
+      url: img357,
       title: "Sangeet Sparkles",
       caption: "Dazzling high-motion festive rituals captured in dramatic focus."
     },
     {
       id: "traditional-3",
       category: "traditional",
-      url: img3789,
-      title: "Sacred Fire",
-      caption: "Archival documentation of traditional Indian ritual moments."
+      url: img365,
+      title: "Sacred Fire Vows",
+      caption: "Archival documentation of traditional Indian ritual heartbeats."
+    },
+    {
+      id: "traditional-4",
+      category: "traditional",
+      url: img433,
+      title: "Sacred Warmth",
+      caption: "Capturing absolute joy and ritualistic devotion in Guntur."
+    },
+    {
+      id: "traditional-5",
+      category: "traditional",
+      url: img436,
+      title: "Bridal Adornments",
+      caption: "Exquisite candid documentation of cultural details."
     }
   ]
 };

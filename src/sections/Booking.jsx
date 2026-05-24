@@ -128,7 +128,7 @@ export const Booking = () => {
                 href="https://wa.me/919849819634?text=Hello%20Yarlagadda%20Photography,%20I%20would%20like%20to%20inquire%20about%20your%20photography%20packages%20and%20date%20availability."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-charcoal/80 glassmorphism-gold rounded-full border border-gold/20 text-gold hover:text-soft-white hover:bg-gold/15 transition-all duration-500 shadow-[0_0_20px_rgba(214,175,55,0.05)] hover:shadow-[0_0_25px_rgba(214,175,55,0.2)] group btn-luxury cursor-pointer"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-charcoal/80 glassmorphism-gold rounded-full border border-gold/20 text-gold hover:text-soft-white hover:bg-gold/15 transition-all duration-500 shadow-[0_0_20px_rgba(237,27,36,0.05)] hover:shadow-[0_0_25px_rgba(237,27,36,0.2)] group btn-luxury cursor-pointer"
               >
                 {/* Soft golden pulsing dot */}
                 <span className="relative flex h-2.5 w-2.5">
@@ -290,7 +290,7 @@ export const Booking = () => {
                     <button
                       type="submit"
                       disabled={status === 'sending'}
-                      className="mt-4 px-8 py-4 bg-gold hover:bg-gold-hover disabled:bg-gold/40 text-matte-black disabled:text-matte-black/50 text-xs font-semibold tracking-widest uppercase rounded-full shadow-lg hover:shadow-[0_0_25px_rgba(214,175,55,0.45)] transition-all duration-500 flex items-center justify-center gap-2 relative overflow-hidden btn-luxury cursor-pointer"
+                      className="mt-4 px-8 py-4 bg-gold hover:bg-gold-hover disabled:bg-gold/40 text-matte-black disabled:text-matte-black/50 text-xs font-semibold tracking-widest uppercase rounded-full shadow-lg hover:shadow-[0_0_25px_rgba(237,27,36,0.45)] transition-all duration-500 flex items-center justify-center gap-2 relative overflow-hidden btn-luxury cursor-pointer"
                     >
                       {status === 'sending' ? (
                         <>

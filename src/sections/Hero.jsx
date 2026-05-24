@@ -123,7 +123,7 @@ export const Hero = () => {
           <a
             href="#gallery"
             onClick={(e) => handleScrollTo(e, 'gallery')}
-            className="px-8 py-3.5 bg-soft-white hover:bg-gold text-matte-black hover:text-soft-white rounded-full text-xs tracking-widest uppercase font-semibold transition-all duration-500 shadow-lg hover:shadow-[0_0_25px_rgba(214,175,55,0.3)] min-w-[180px] text-center cursor-pointer"
+            className="px-8 py-3.5 bg-soft-white hover:bg-gold text-matte-black hover:text-soft-white rounded-full text-xs tracking-widest uppercase font-semibold transition-all duration-500 shadow-lg hover:shadow-[0_0_25px_rgba(237,27,36,0.3)] min-w-[180px] text-center cursor-pointer"
           >
             View Portfolio
           </a>

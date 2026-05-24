@@ -96,7 +96,7 @@ export const BeforeAfterSlider = ({ imageUrl }) => {
         style={{ left: `${sliderPosition}%` }}
       >
         {/* Floating circular gold handle */}
-        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-charcoal border-2 border-gold/70 text-gold flex items-center justify-center shadow-[0_0_15px_rgba(214,175,55,0.4)] transition-transform duration-300 group-hover:scale-110">
+        <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-charcoal border-2 border-gold/70 text-gold flex items-center justify-center shadow-[0_0_15px_rgba(237,27,36,0.4)] transition-transform duration-300 group-hover:scale-110">
           <div className="flex items-center text-gold">
             <ChevronLeft className="w-3.5 h-3.5 -mr-0.5" />
             <ChevronRight className="w-3.5 h-3.5 -ml-0.5" />

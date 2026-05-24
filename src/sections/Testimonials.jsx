@@ -111,7 +111,7 @@ export const Testimonials = () => {
               onClick={() => setActiveIdx(idx)}
               className={`w-1.5 h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
                 activeIdx === idx 
-                  ? 'bg-gold w-6 shadow-[0_0_8px_#D4AF37]' 
+                  ? 'bg-gold w-6 shadow-[0_0_8px_#ed1b24]' 
                   : 'bg-silver/20 hover:bg-silver/40'
               }`}
               aria-label={`Jump to slide ${idx + 1}`}

@@ -10,8 +10,8 @@
   --color-charcoal: #121212;
   --color-soft-white: #F5F5F5;
   --color-silver: #BFC5CC;
-  --color-gold: #D4AF37;
-  --color-gold-hover: #AA8C2C;
+  --color-gold: #ed1b24;
+  --color-gold-hover: #c9141d;
 }
 
 /* Custom Reset & Scroll Properties */
@@ -48,7 +48,7 @@ html, body {
 
 /* Elegant Text Selection */
 ::selection {
-  background: rgba(212, 175, 55, 0.2);
+  background: rgba(237, 27, 36, 0.2);
   color: var(--color-soft-white);
 }
 
@@ -82,7 +82,7 @@ h1, h2, h3, .font-serif-luxury {
   background: rgba(18, 18, 18, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(214, 175, 87, 0.15);
+  border: 1px solid rgba(237, 27, 36, 0.15);
 }
 
 /* Ambient Particle Effects */

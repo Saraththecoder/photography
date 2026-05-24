@@ -72,7 +72,7 @@ export const CursorGlow = () => {
           translateX: '-50%',
           translateY: '-50%',
           background: isHovered 
-            ? 'radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, rgba(212, 175, 55, 0) 70%)' 
+            ? 'radial-gradient(circle, rgba(237, 27, 36, 0.4) 0%, rgba(237, 27, 36, 0) 70%)' 
             : 'radial-gradient(circle, rgba(191, 197, 204, 0.3) 0%, rgba(191, 197, 204, 0) 70%)',
           width: isHovered ? '80px' : '40px',
           height: isHovered ? '80px' : '40px',
@@ -87,10 +87,10 @@ export const CursorGlow = () => {
           y: cursorY,
           translateX: '-50%',
           translateY: '-50%',
-          backgroundColor: isHovered ? '#D4AF37' : '#F5F5F5',
+          backgroundColor: isHovered ? '#ed1b24' : '#F5F5F5',
           scale: isHovered ? 1.8 : 1,
           boxShadow: isHovered 
-            ? '0 0 10px #D4AF37, 0 0 20px #D4AF37' 
+            ? '0 0 10px #ed1b24, 0 0 20px #ed1b24' 
             : '0 0 5px rgba(255, 255, 255, 0.5)',
         }}
         transition={{ type: 'tween', ease: 'backOut', duration: 0.1 }}

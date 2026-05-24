@@ -1,60 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import logoImg from '../assets/logo.jpg';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const navLinks = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'gallery', label: 'Gallery' },
-    { id: 'services', label: 'Services' },
-    { id: 'booking', label: 'Inquire' },
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/gallery', label: 'Gallery' },
+    { path: '/services', label: 'Services' },
+    { path: '/inquire', label: 'Inquire' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       // Toggle scrolled glassmorphic styling
       setIsScrolled(window.scrollY > 50);
-
-      // Simple, high-performance scrollspy tracking
-      const sections = navLinks.map(link => document.getElementById(link.id));
-      const scrollPosition = window.scrollY + 120; // offset
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navLinks[i].id);
-          break;
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleLinkClick = (e, id) => {
-    e.preventDefault();
-    setIsMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80; // navbar height offset
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
     <>
@@ -68,10 +40,10 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           
           {/* LUXURY EDITORIAL BRAND LOGO */}
-          <a 
-            href="#home" 
-            onClick={(e) => handleLinkClick(e, 'home')}
+          <Link 
+            to="/" 
             className="flex items-center gap-2.5 group cursor-pointer"
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             <img 
               src={logoImg} 
@@ -86,42 +58,43 @@ export const Navbar = () => {
                 Photography
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* DESKTOP MINIMAL EDITORIAL MENU */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                onClick={(e) => handleLinkClick(e, link.id)}
-                className={`relative py-1 text-xs tracking-widest uppercase font-light transition-all duration-300 cursor-pointer ${
-                  activeSection === link.id 
-                    ? 'text-gold font-medium' 
-                    : 'text-silver/80 hover:text-soft-white'
-                }`}
-              >
-                {link.label}
-                {activeSection === link.id && (
-                  <motion.span
-                    layoutId="activeNavLine"
-                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-gold"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = currentPath === link.path;
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`relative py-1 text-xs tracking-widest uppercase font-light transition-all duration-300 cursor-pointer ${
+                    isActive 
+                      ? 'text-gold font-medium' 
+                      : 'text-silver/80 hover:text-soft-white'
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeNavLine"
+                      className="absolute bottom-0 left-0 right-0 h-[1px] bg-gold"
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* RIGHT SIDE DESKTOP BOOKING CTA */}
           <div className="hidden md:flex items-center">
-            <a
-              href="#booking"
-              onClick={(e) => handleLinkClick(e, 'booking')}
-              className="px-6 py-2 border border-gold/40 hover:border-gold rounded-full text-[10px] tracking-widest uppercase font-light text-gold hover:text-soft-white hover:bg-gold/10 transition-all duration-500 shadow-[0_0_15px_rgba(214,175,55,0.05)] hover:shadow-[0_0_20px_rgba(214,175,55,0.15)] btn-luxury cursor-pointer"
+            <Link
+              to="/inquire"
+              className="px-6 py-2 border border-gold/40 hover:border-gold rounded-full text-[10px] tracking-widest uppercase font-light text-gold hover:text-soft-white hover:bg-gold/10 transition-all duration-500 shadow-[0_0_15px_rgba(237,27,36,0.05)] hover:shadow-[0_0_20px_rgba(237,27,36,0.15)] btn-luxury cursor-pointer"
             >
               Book a Shoot
-            </a>
+            </Link>
           </div>
 
           {/* MOBILE TOGGLE TRIGGER */}
@@ -146,23 +119,29 @@ export const Navbar = () => {
             className="fixed inset-0 z-30 md:hidden bg-black/95 backdrop-blur-xl flex flex-col justify-center px-8"
           >
             <div className="flex flex-col gap-6 text-center mt-12">
-              {navLinks.map((link, idx) => (
-                <motion.a
-                  key={link.id}
-                  href={`#${link.id}`}
-                  onClick={(e) => handleLinkClick(e, link.id)}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.08 }}
-                  className={`text-lg tracking-[0.2em] uppercase font-serif ${
-                    activeSection === link.id 
-                      ? 'text-gold' 
-                      : 'text-silver hover:text-soft-white'
-                  }`}
-                >
-                  {link.label}
-                </motion.a>
-              ))}
+              {navLinks.map((link, idx) => {
+                const isActive = currentPath === link.path;
+                return (
+                  <motion.div
+                    key={link.path}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.08 }}
+                  >
+                    <Link
+                      to={link.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`text-lg tracking-[0.2em] uppercase font-serif block ${
+                        isActive 
+                          ? 'text-gold font-medium' 
+                          : 'text-silver hover:text-soft-white'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                );
+              })}
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -170,13 +149,13 @@ export const Navbar = () => {
                 transition={{ delay: navLinks.length * 0.08 }}
                 className="mt-8 self-center"
               >
-                <a
-                  href="#booking"
-                  onClick={(e) => handleLinkClick(e, 'booking')}
-                  className="px-8 py-3 border border-gold text-gold rounded-full text-xs tracking-widest uppercase font-light hover:bg-gold/15 transition-all duration-300"
+                <Link
+                  to="/inquire"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-8 py-3 border border-gold text-gold rounded-full text-xs tracking-widest uppercase font-light hover:bg-gold/15 transition-all duration-300 block text-center"
                 >
                   Book a Shoot
-                </a>
+                </Link>
               </motion.div>
             </div>
           </motion.div>
