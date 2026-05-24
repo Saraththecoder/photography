@@ -20,7 +20,7 @@ export const Home = () => {
       <Hero />
 
       {/* 2. Philosophy Summary Callout */}
-      <section className="relative w-full py-20 bg-charcoal/30 border-b border-white/5 overflow-hidden">
+      <section id="about" className="relative w-full py-20 bg-charcoal/30 border-b border-white/5 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             

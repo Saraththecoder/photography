@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { 
   Camera, Sparkles, Flame, User, Radio, Film, Heart, 
-  PartyPopper, Briefcase, Home, Baby, UserCheck, 
-  Layers, Package, Shirt, Award, ChevronRight 
+  Home, Baby, UserCheck, Compass, Sun, Layers,
+  Award, ChevronRight 
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -22,24 +22,19 @@ export const Services = () => {
           description: "Complete luxury documentation from pre-ritual preparations to the grand departure, emphasizing candids, cinematic light, and premium portraits."
         },
         {
-          icon: <Film className="w-6 h-6 text-gold" />,
-          title: "Wedding Videography",
-          description: "Stunning fine-art documentaries and highlights. Edited with custom sound design, color grading, and emotional scores that feel like cinema films."
-        },
-        {
           icon: <Sparkles className="w-6 h-6 text-gold" />,
-          title: "Pre-Wedding Shoots",
-          description: "A half or full-day immersive editorial narrative in selected luxury locations, capturing the genuine story of your bond in moving visuals."
-        },
-        {
-          icon: <Flame className="w-6 h-6 text-gold" />,
           title: "Engagement Shoots",
-          description: "Preserving the beautiful milestone of your ring ceremony, candid reactions, and initial vows in luxury editorial frames."
+          description: "Preserving the beautiful milestone of your ring ceremony, candid emotions, and initial traditional vows in luxury editorial frames."
         },
         {
-          icon: <Radio className="w-6 h-6 text-gold" />,
-          title: "Drone Coverage",
-          description: "Expansive high-altitude drone coverages that add grand scale, breathtaking perspectives, and spatial context to your special venue's landscape."
+          icon: <Film className="w-6 h-6 text-gold" />,
+          title: "Candid Photography",
+          description: "Stealthy, completely unposed visual capture of raw family emotions, laughter, and silent heartbeats captured with absolute precision."
+        },
+        {
+          icon: <Compass className="w-6 h-6 text-gold" />,
+          title: "Outdoor Shoots",
+          description: "Scenic romantic couple narratives and pre-wedding stories set in breathtaking natural landscapes or luxury destinations."
         }
       ]
     },
@@ -49,24 +44,19 @@ export const Services = () => {
       icon: <Award className="w-4 h-4" />,
       packages: [
         {
-          icon: <PartyPopper className="w-6 h-6 text-gold" />,
-          title: "Birthday Events",
-          description: "Capturing the colorful joy, emotional candid reactions, and delightful celebratory moments of your birthday parties."
+          icon: <Layers className="w-6 h-6 text-gold" />,
+          title: "Half Saree Ceremony",
+          description: "Preserving the vibrant cultural colors, elegant attire, and joyful milestones of this beautiful South Indian traditional ceremony."
         },
         {
-          icon: <Briefcase className="w-6 h-6 text-gold" />,
-          title: "Corporate Events",
-          description: "High-end editorial documentation of business meetings, award dinners, company galas, and dynamic commercial events."
+          icon: <UserCheck className="w-6 h-6 text-gold" />,
+          title: "Dhoti Ceremony",
+          description: "Documenting the proud, elegant traditional coming-of-age dhoti rituals and familial celebrations with documentary realism."
         },
         {
           icon: <Home className="w-6 h-6 text-gold" />,
-          title: "Housewarming Events",
-          description: "Warm and candid storytelling framing the sacred traditional house rituals and celebratory gatherings in your new home."
-        },
-        {
-          icon: <Baby className="w-6 h-6 text-gold" />,
-          title: "Baby Shower Events",
-          description: "Celebrating your maternity milestone and capturing raw, high-contrast emotional baby shower highlights and rituals."
+          title: "House Warming Events",
+          description: "Candid and warm storytelling framing the sacred grihapravesham pooja rituals and celebratory gatherings in Guntur."
         }
       ]
     },
@@ -76,32 +66,20 @@ export const Services = () => {
       icon: <User className="w-4 h-4" />,
       packages: [
         {
-          icon: <UserCheck className="w-6 h-6 text-gold" />,
+          icon: <Sun className="w-6 h-6 text-gold" />,
           title: "Maternity Shoots",
-          description: "Artistic maternal portraiture highlighting organic shapes, elegant styling, and natural lighting of your maternity milestone."
+          description: "Artistic maternal portraiture capturing your maternal glow, elegant silhouettes, and organic forms under soft studio lighting."
         },
         {
-          icon: <Layers className="w-6 h-6 text-gold" />,
-          title: "Portfolio Shoots",
-          description: "High-end personal branding, fashion modeling books, and premium casting portfolios for models, actors, and executives."
-        },
-        {
-          icon: <Package className="w-6 h-6 text-gold" />,
-          title: "Product Photography",
-          description: "Precision-lit, high-definition creative catalog and branding captures of your business merchandise and product designs."
-        },
-        {
-          icon: <Shirt className="w-6 h-6 text-gold" />,
-          title: "Fashion Photography",
-          description: "Avant-garde, dramatic magazine-grade concept portfolios shot in specialized studios or epic destination landmarks."
+          icon: <Baby className="w-6 h-6 text-gold" />,
+          title: "Newborn Baby Shoots",
+          description: "Delicate and adorable fine-art baby portraiture capturing pure innocence, soft textures, and initial raw expressions."
         }
       ]
     }
   ];
 
   const activeCategory = serviceCategories.find(cat => cat.id === activeTab);
-
-
 
   return (
     <section id="services" className="relative w-full py-24 lg:py-32 bg-matte-black">

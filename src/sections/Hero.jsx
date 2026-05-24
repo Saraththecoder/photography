@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { portfolioImages } from '../config/images';
 
 const InstagramIcon = ({ className }) => (
@@ -120,20 +121,18 @@ export const Hero = () => {
           transition={{ duration: 1.2, delay: 0.5, ease: [0.19, 1, 0.22, 1] }}
           className="flex flex-col sm:flex-row items-center gap-4"
         >
-          <a
-            href="#gallery"
-            onClick={(e) => handleScrollTo(e, 'gallery')}
-            className="px-8 py-3.5 bg-soft-white hover:bg-gold text-matte-black hover:text-soft-white rounded-full text-xs tracking-widest uppercase font-semibold transition-all duration-500 shadow-lg hover:shadow-[0_0_25px_rgba(237,27,36,0.3)] min-w-[180px] text-center cursor-pointer"
+          <Link
+            to="/gallery"
+            className="px-8 py-3.5 bg-soft-white hover:bg-gold text-matte-black hover:text-soft-white rounded-full text-xs tracking-widest uppercase font-semibold transition-all duration-500 shadow-lg hover:shadow-[0_0_25px_rgba(237,27,36,0.3)] min-w-[180px] text-center cursor-pointer block"
           >
             View Portfolio
-          </a>
-          <a
-            href="#booking"
-            onClick={(e) => handleScrollTo(e, 'booking')}
-            className="px-8 py-3.5 border border-white/20 hover:border-gold rounded-full text-xs tracking-widest uppercase font-light text-soft-white hover:text-gold hover:bg-white/5 transition-all duration-500 min-w-[180px] text-center cursor-pointer"
+          </Link>
+          <Link
+            to="/inquire"
+            className="px-8 py-3.5 border border-white/20 hover:border-gold rounded-full text-xs tracking-widest uppercase font-light text-soft-white hover:text-gold hover:bg-white/5 transition-all duration-500 min-w-[180px] text-center cursor-pointer block"
           >
             Book a Shoot
-          </a>
+          </Link>
         </motion.div>
       </div>
 

@@ -229,11 +229,15 @@ export const Booking = () => {
                         >
                           <option value="" disabled className="bg-charcoal text-silver">Select Event Type</option>
                           <option value="Wedding" className="bg-charcoal text-soft-white">Wedding Celebration</option>
-                          <option value="Pre-Wedding" className="bg-charcoal text-soft-white">Pre-Wedding Story</option>
-                          <option value="Traditional" className="bg-charcoal text-soft-white">Traditional Event</option>
-                          <option value="Portrait" className="bg-charcoal text-soft-white">Editorial Portrait Session</option>
-                          <option value="Videography" className="bg-charcoal text-soft-white">Cinematic Documentary Film</option>
-                          <option value="Other" className="bg-charcoal text-soft-white">Custom Vision</option>
+                          <option value="Engagement" className="bg-charcoal text-soft-white">Engagement Shoot</option>
+                          <option value="Candid" className="bg-charcoal text-soft-white">Candid Photography</option>
+                          <option value="Outdoor" className="bg-charcoal text-soft-white">Outdoor Shoot</option>
+                          <option value="HalfSaree" className="bg-charcoal text-soft-white">Half Saree Ceremony</option>
+                          <option value="Dhoti" className="bg-charcoal text-soft-white">Dhoti Ceremony</option>
+                          <option value="Housewarming" className="bg-charcoal text-soft-white">House Warming Event</option>
+                          <option value="Maternity" className="bg-charcoal text-soft-white">Maternity Shoot</option>
+                          <option value="Newborn" className="bg-charcoal text-soft-white">Newborn Baby Shoot</option>
+                          <option value="Other" className="bg-charcoal text-soft-white">Other / Custom Vision</option>
                         </select>
                       </div>
 
