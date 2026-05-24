@@ -5,6 +5,7 @@ import {
   Layers, Package, Shirt, Award, ChevronRight 
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const Services = () => {
   const [activeTab, setActiveTab] = useState('wedding');
@@ -100,22 +101,7 @@ export const Services = () => {
 
   const activeCategory = serviceCategories.find(cat => cat.id === activeTab);
 
-  const handleScrollToBooking = (e) => {
-    e.preventDefault();
-    const element = document.getElementById('booking');
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
     <section id="services" className="relative w-full py-24 lg:py-32 bg-matte-black">
@@ -206,14 +192,13 @@ export const Services = () => {
 
                   {/* Booking Link CTA */}
                   <div className="relative z-10 mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
-                    <a 
-                      href="#booking"
-                      onClick={handleScrollToBooking}
-                      className="inline-flex items-center gap-1 text-[10px] tracking-widest text-gold hover:text-soft-white uppercase font-medium transition-colors duration-300 group/btn"
+                    <Link 
+                      to="/inquire"
+                      className="inline-flex items-center gap-1 text-[10px] tracking-widest text-gold hover:text-soft-white uppercase font-medium transition-colors duration-300 group/btn cursor-pointer"
                     >
                       Request Quote 
                       <ChevronRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform duration-300" />
-                    </a>
+                    </Link>
                   </div>
 
                 </motion.div>
