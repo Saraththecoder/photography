@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, ShieldCheck, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import Hero from '../sections/Hero';
 import Testimonials from '../sections/Testimonials';
 import Instagram from '../sections/Instagram';
@@ -10,6 +11,11 @@ import localCinematic from '../assets/YR400201.JPG';
 export const Home = () => {
   return (
     <div className="w-full">
+      <SEO 
+        title="Luxury Wedding & Portrait Photographer"
+        description="Explore the luxury cinematic photography portfolio of Yarlagadda Photography in Guntur. Specializing in high-end, fine-art wedding documentation, candid couple narratives, and editorial portraits."
+        keywords="Yarlagadda Photography, Guntur wedding photographer, luxury wedding photography, cinematic couple shoot, Guntur fine art photographer, editorial portraits"
+      />
       {/* 1. Fullscreen Visual Hero */}
       <Hero />
 
