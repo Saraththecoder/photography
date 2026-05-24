@@ -67,15 +67,15 @@ export const Instagram = () => {
           <div className="w-12 h-[1px] bg-gold mt-4" />
         </div>
 
-        {/* Instgaram Handle CTA */}
+        {/* Instagram Handle CTA */}
         <a 
-          href="https://instagram.com" 
+          href="https://instagram.com/yarlagaddaphotography" 
           target="_blank" 
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-6 py-2.5 glassmorphism hover:glassmorphism-gold rounded-full text-xs text-soft-white hover:text-gold border border-white/5 hover:border-gold/30 transition-all duration-500 self-start md:self-auto cursor-pointer"
         >
           <InstaIcon className="w-4 h-4 text-gold" />
-          <span className="font-light tracking-widest uppercase text-[10px]">Follow @balu_photography</span>
+          <span className="font-light tracking-widest uppercase text-[10px]">Follow @yarlagaddaphotography</span>
         </a>
       </div>
 
@@ -116,7 +116,7 @@ export const Instagram = () => {
             <span className="text-[10px] text-silver/60 tracking-wider font-light mt-1">Get daily updates and behind-the-scenes editing.</span>
           </div>
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/yarlagaddaphotography"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 bg-gold hover:bg-gold-hover text-matte-black text-[10px] font-semibold tracking-widest uppercase rounded-full transition-colors duration-300 cursor-pointer"

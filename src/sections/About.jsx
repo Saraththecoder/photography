@@ -83,7 +83,7 @@ export const About = () => {
           {/* Right Column: Narrative Biography */}
           <div className="lg:col-span-6 flex flex-col gap-6 md:pl-4">
             <span className="text-xs tracking-[0.25em] text-gold uppercase font-light">
-              Meet Balu — Principal Photographer
+              Meet Yarlagadda — Principal Photographer
             </span>
             
             <p className="text-base md:text-lg text-soft-white font-serif leading-relaxed font-light italic">
@@ -91,7 +91,7 @@ export const About = () => {
             </p>
 
             <p className="text-sm text-silver/80 leading-relaxed font-light">
-              For nearly a decade, Balu Photography has stood at the crossroads of documentary realism and fine-art luxury portraiture. Based on a deep love for artistic storytelling, we specialize in high-end wedding documentation, cinematic couple narratives, and editorial portraits. 
+              For nearly a decade, Yarlagadda Photography has stood at the crossroads of documentary realism and fine-art luxury portraiture. Based on a deep love for artistic storytelling, we specialize in high-end wedding documentation, cinematic couple narratives, and editorial portraits. 
             </p>
 
             <p className="text-sm text-silver/80 leading-relaxed font-light">

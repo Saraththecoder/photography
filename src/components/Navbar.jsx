@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Camera } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logoImg from '../assets/logo.jpg';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,12 +71,16 @@ export const Navbar = () => {
           <a 
             href="#home" 
             onClick={(e) => handleLinkClick(e, 'home')}
-            className="flex items-center gap-2 group cursor-pointer"
+            className="flex items-center gap-2.5 group cursor-pointer"
           >
-            <Camera className="w-5 h-5 text-gold group-hover:rotate-12 transition-transform duration-500" />
+            <img 
+              src={logoImg} 
+              alt="Yarlagadda Photography Logo" 
+              className="w-8 h-8 rounded-full object-cover border border-gold/40 group-hover:scale-105 transition-transform duration-500 shadow-md"
+            />
             <div className="flex flex-col">
               <span className="text-base tracking-[0.25em] font-serif uppercase text-soft-white group-hover:text-gold transition-colors duration-500 font-medium">
-                Balu
+                Yarlagadda
               </span>
               <span className="text-[8px] tracking-[0.4em] font-sans uppercase text-silver/60 -mt-0.5">
                 Photography

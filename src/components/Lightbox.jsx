@@ -34,7 +34,7 @@ export const Lightbox = ({ isOpen, activeImage, images, onClose, onPrev, onNext 
         <div className="w-full flex items-center justify-between p-6 bg-gradient-to-b from-black/80 to-transparent relative z-20">
           <div className="flex flex-col">
             <span className="text-[10px] tracking-widest text-gold uppercase font-semibold">
-              Balu Photography
+              Yarlagadda Photography
             </span>
             <span className="text-xs text-silver/80 tracking-wider capitalize font-light mt-0.5">
               Category: {activeImage.category}

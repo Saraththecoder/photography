@@ -11,11 +11,7 @@ const InstagramIcon = ({ className }) => (
   </svg>
 );
 
-const FacebookIcon = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-  </svg>
-);
+
 
 export const Hero = () => {
   const { url, title, tagline, description } = portfolioImages.hero;
@@ -62,7 +58,7 @@ export const Hero = () => {
       <div className="absolute left-6 lg:left-12 bottom-24 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 z-20 flex flex-row lg:flex-col items-center gap-6">
         <span className="hidden lg:block w-[1px] h-12 bg-silver/20" />
         <a 
-          href="https://instagram.com" 
+          href="https://instagram.com/yarlagaddaphotography" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-silver/60 hover:text-gold hover:-translate-y-1 transition-all duration-300"
@@ -70,19 +66,10 @@ export const Hero = () => {
         >
           <InstagramIcon className="w-4 h-4" />
         </a>
-        <a 
-          href="https://facebook.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-silver/60 hover:text-gold hover:-translate-y-1 transition-all duration-300"
-          aria-label="Follow us on Facebook"
-        >
-          <FacebookIcon className="w-4 h-4" />
-        </a>
         
         {/* WhatsApp Custom Editorial Icon */}
         <a 
-          href="https://wa.me/919999999999" 
+          href="https://wa.me/919849819634" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-silver/60 hover:text-gold hover:-translate-y-1 transition-all duration-300 flex items-center justify-center font-bold text-xs"

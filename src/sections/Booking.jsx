@@ -24,7 +24,7 @@ export const Booking = () => {
     setStatus('sending');
 
     // Format a highly professional, bolded WhatsApp inquiry message
-    const messageText = `Hello Balu Photography! I would like to make a booking inquiry. Here are my details:\n\n` +
+    const messageText = `Hello Yarlagadda Photography! I would like to make a booking inquiry. Here are my details:\n\n` +
       `✨ *Name*: ${formData.name}\n` +
       `📞 *Phone*: ${formData.phone}\n` +
       `📅 *Event Profile*: ${formData.eventType}\n` +
@@ -34,7 +34,7 @@ export const Booking = () => {
       `Please let me know if my date is available! Thank you.`;
 
     const encodedText = encodeURIComponent(messageText);
-    const whatsappUrl = `https://wa.me/919999999999?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/919849819634?text=${encodedText}`;
 
     // Simulate high-end processing delay, then launch WhatsApp redirection in a new tab
     setTimeout(() => {
@@ -87,7 +87,7 @@ export const Booking = () => {
                 </div>
                 <div className="flex flex-col text-left">
                   <span className="text-[10px] text-silver/50 tracking-wider uppercase">Direct Hotline</span>
-                  <span className="text-xs text-soft-white font-medium mt-0.5">+91 99999 99999</span>
+                  <span className="text-xs text-soft-white font-medium mt-0.5">+91 98498 19634</span>
                 </div>
               </div>
 
@@ -97,7 +97,7 @@ export const Booking = () => {
                 </div>
                 <div className="flex flex-col text-left">
                   <span className="text-[10px] text-silver/50 tracking-wider uppercase">Email Desk</span>
-                  <span className="text-xs text-soft-white font-medium mt-0.5">hello@baluphotography.com</span>
+                  <span className="text-xs text-soft-white font-medium mt-0.5">hello@yarlagaddaphotography.com</span>
                 </div>
               </div>
 
@@ -107,7 +107,7 @@ export const Booking = () => {
                 </div>
                 <div className="flex flex-col text-left">
                   <span className="text-[10px] text-silver/50 tracking-wider uppercase">Private Studio</span>
-                  <span className="text-xs text-soft-white font-medium mt-0.5">Jubilee Hills, Road No. 36, Hyderabad, India</span>
+                  <span className="text-xs text-soft-white font-medium mt-0.5">SVN Colony / Udyoga Nagar, Guntur, India</span>
                 </div>
               </div>
 
@@ -125,7 +125,7 @@ export const Booking = () => {
             {/* WHATSAPP FLOATING QUICK CONTACT PANEL */}
             <div className="mt-6 pt-6 border-t border-white/5 text-left">
               <a 
-                href="https://wa.me/919999999999?text=Hello%20Balu%20Photography,%20I%20would%20like%20to%20inquire%20about%20your%20photography%20packages%20and%20date%20availability."
+                href="https://wa.me/919849819634?text=Hello%20Yarlagadda%20Photography,%20I%20would%20like%20to%20inquire%20about%20your%20photography%20packages%20and%20date%20availability."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-charcoal/80 glassmorphism-gold rounded-full border border-gold/20 text-gold hover:text-soft-white hover:bg-gold/15 transition-all duration-500 shadow-[0_0_20px_rgba(214,175,55,0.05)] hover:shadow-[0_0_25px_rgba(214,175,55,0.2)] group btn-luxury cursor-pointer"
@@ -160,7 +160,7 @@ export const Booking = () => {
                       Inquiry Received
                     </h3>
                     <p className="text-xs md:text-sm text-silver/80 font-light mt-4 leading-relaxed max-w-sm">
-                      Thank you for choosing Balu Photography. Your dates have been flagged for calendar validation. Our studio coordinator will reach out to you via call or email within the next 12 hours.
+                      Thank you for choosing Yarlagadda Photography. Your dates have been flagged for calendar validation. Our studio coordinator will reach out to you via call or email within the next 12 hours.
                     </p>
                     <button
                       onClick={() => setStatus('idle')}

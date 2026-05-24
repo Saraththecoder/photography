@@ -1,4 +1,4 @@
-// Balu Photography - Premium Visual Asset Configuration
+// Yarlagadda Photography - Premium Visual Asset Configuration
 // Centralized image mapping for your actual 15 high-resolution photography assets.
 
 import img3444 from '../assets/PRPG3444.jpg';
@@ -20,7 +20,7 @@ export const portfolioImages = {
   // 1. Flagship Fullscreen Hero Image
   hero: {
     url: img3444,
-    title: "Balu Photography",
+    title: "Yarlagadda Photography",
     tagline: "Capturing Emotions Beyond Time",
     description: "Every Frame Tells a Story"
   },

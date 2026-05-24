@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Camera, ArrowUp, MessageSquare } from 'lucide-react';
+import { ArrowUp, MessageSquare } from 'lucide-react';
+import logoImg from '../assets/logo.jpg';
 
 const InstagramIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-  </svg>
-);
-
-const FacebookIcon = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
   </svg>
 );
 
@@ -65,12 +60,16 @@ export const Footer = () => {
             <a 
               href="#home" 
               onClick={(e) => handleLinkClick(e, 'home')}
-              className="flex items-center gap-2 group cursor-pointer"
+              className="flex items-center gap-2.5 group cursor-pointer"
             >
-              <Camera className="w-5 h-5 text-gold" />
+              <img 
+                src={logoImg} 
+                alt="Yarlagadda Photography Logo" 
+                className="w-8 h-8 rounded-full object-cover border border-gold/40 group-hover:scale-105 transition-transform duration-500 shadow-md"
+              />
               <div className="flex flex-col">
                 <span className="text-base tracking-[0.25em] font-serif uppercase text-soft-white group-hover:text-gold transition-colors duration-300 font-medium">
-                  Balu
+                  Yarlagadda
                 </span>
                 <span className="text-[8px] tracking-[0.4em] font-sans uppercase text-silver/60 -mt-0.5">
                   Photography
@@ -83,8 +82,8 @@ export const Footer = () => {
             
             {/* Direct Coordinates */}
             <div className="flex flex-col text-[11px] text-silver/50 tracking-wider gap-1.5 uppercase">
-              <span>Studio: Jubilee Hills, Hyderabad</span>
-              <span>Desk: +91 99999 99999</span>
+              <span>Studio: SVN Colony / Udyoga Nagar, Guntur</span>
+              <span>Desk: +91 98498 19634</span>
             </div>
           </div>
 
@@ -140,7 +139,7 @@ export const Footer = () => {
             </h4>
             <div className="flex items-center gap-4 mt-1">
               <a 
-                href="https://instagram.com" 
+                href="https://instagram.com/yarlagaddaphotography" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-matte-black border border-white/5 text-silver/70 hover:text-gold hover:border-gold/30 flex items-center justify-center transition-all duration-300 cursor-pointer"
@@ -149,16 +148,7 @@ export const Footer = () => {
                 <InstagramIcon className="w-4 h-4" />
               </a>
               <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-matte-black border border-white/5 text-silver/70 hover:text-gold hover:border-gold/30 flex items-center justify-center transition-all duration-300 cursor-pointer"
-                aria-label="Facebook"
-              >
-                <FacebookIcon className="w-4 h-4" />
-              </a>
-              <a 
-                href="https://wa.me/919999999999" 
+                href="https://wa.me/919849819634" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-matte-black border border-white/5 text-silver/70 hover:text-gold hover:border-gold/30 flex items-center justify-center transition-all duration-300 cursor-pointer"
@@ -177,7 +167,7 @@ export const Footer = () => {
         {/* Bottom Bar: Copyright & Archival */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-[10px] text-silver/40 tracking-widest uppercase font-light">
           <span>
-            © {currentYear} Balu Photography. All Rights Reserved.
+            © {currentYear} Yarlagadda Photography. All Rights Reserved.
           </span>
           <span className="flex items-center gap-1.5 pl-0.5">
             Archival Quality Handcrafted Presentation

@@ -8,21 +8,21 @@ export const Testimonials = () => {
   const reviews = [
     {
       id: 1,
-      quote: "Balu did not just photograph our wedding; he captured the soul of our day. Looking through our album is like re-living the laughter and the silent tears all over again. Every frame is a true artistic masterpiece.",
+      quote: "Yarlagadda did not just photograph our wedding; they captured the soul of our day. Looking through our album is like re-living the laughter and the silent tears all over again. Every frame is a true artistic masterpiece.",
       names: "Aditya & Malvika",
       event: "Palace Wedding — Udaipur, India",
       avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=300&auto=format&fit=crop"
     },
     {
       id: 2,
-      quote: "His mastery of light and shadows is out of this world. We wanted something editorial, minimal, and away from typical generic wedding photography. Balu gave us a cinematic magazine portfolio that we will cherish forever.",
+      quote: "Their mastery of light and shadows is out of this world. We wanted something editorial, minimal, and away from typical generic wedding photography. Yarlagadda gave us a cinematic magazine portfolio that we will cherish forever.",
       names: "Vikram & Ananya",
       event: "Beachside Couple Shoot — Goa, India",
       avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop"
     },
     {
       id: 3,
-      quote: "Balu has an incredible, calming presence. He captures candid, completely unposed emotions with absolute stealth. Half the time, we didn't even notice he was there, yet he caught our most intimate glances perfectly.",
+      quote: "Yarlagadda has an incredible, calming presence. They capture candid, completely unposed emotions with absolute stealth. Half the time, we didn't even notice they were there, yet they caught our most intimate glances perfectly.",
       names: "Rahul & Shruti",
       event: "Traditional Heritage Sangeet — Hyderabad, India",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&auto=format&fit=crop"
