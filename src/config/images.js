@@ -1,5 +1,5 @@
 // Yarlagadda Photography - Premium Visual Asset Configuration
-// Centralized image mapping for your actual 25 high-resolution photography assets.
+// Centralized image mapping for your actual photography assets (Guntur studio JPEGs + flagship Editorial JPEGs).
 
 import img176 from '../assets/YR400176.JPG';
 import img179 from '../assets/YR400179.JPG';
@@ -26,6 +26,12 @@ import img456 from '../assets/YR400456.JPG';
 import img460 from '../assets/YR400460.JPG';
 import img463 from '../assets/YR400463.JPG';
 import img469 from '../assets/YR400469.JPG';
+
+// Flagship Editorial Feed Wedding Images
+import feedWedding1 from '../assets/PRPG3458.jpg';
+import feedWedding2 from '../assets/PRPG3471.jpg';
+import feedWedding3 from '../assets/PRPG3566.jpg';
+import feedWedding4 from '../assets/PRPG3567.jpg';
 
 export const portfolioImages = {
   // 1. Flagship Fullscreen Hero Image
@@ -54,7 +60,35 @@ export const portfolioImages = {
 
   // 3. Categorized Portfolio Grid Elements
   gallery: [
-    // --- Wedding Section ---
+    // --- Wedding Section (Guntur Studio JPEGs + Flagship Editorial JPEGs) ---
+    {
+      id: "wedding-editorial-1",
+      category: "wedding",
+      url: feedWedding1,
+      title: "Intimate Glances",
+      caption: "Candid closeup capture of deep emotional connections."
+    },
+    {
+      id: "wedding-editorial-2",
+      category: "wedding",
+      url: feedWedding2,
+      title: "Timeless Vows",
+      caption: "Spontaneous smiles and warm ambient light."
+    },
+    {
+      id: "wedding-editorial-3",
+      category: "wedding",
+      url: feedWedding3,
+      title: "The Sacred Promise",
+      caption: "A quiet moment of traditional couple embrace."
+    },
+    {
+      id: "wedding-editorial-4",
+      category: "wedding",
+      url: feedWedding4,
+      title: "Ethereal Graces",
+      caption: "Bridal portrait showcasing high-contrast luxury shadows."
+    },
     {
       id: "wedding-1",
       category: "wedding",
