@@ -23,8 +23,22 @@ export const Booking = () => {
     e.preventDefault();
     setStatus('sending');
 
-    // Simulate luxury API submission delay
+    // Format a highly professional, bolded WhatsApp inquiry message
+    const messageText = `Hello Balu Photography! I would like to make a booking inquiry. Here are my details:\n\n` +
+      `✨ *Name*: ${formData.name}\n` +
+      `📞 *Phone*: ${formData.phone}\n` +
+      `📅 *Event Profile*: ${formData.eventType}\n` +
+      `📆 *Event Date*: ${formData.date}\n` +
+      `📍 *Destination / Venue*: ${formData.location}\n` +
+      `✉️ *My Vision*: ${formData.message}\n\n` +
+      `Please let me know if my date is available! Thank you.`;
+
+    const encodedText = encodeURIComponent(messageText);
+    const whatsappUrl = `https://wa.me/919999999999?text=${encodedText}`;
+
+    // Simulate high-end processing delay, then launch WhatsApp redirection in a new tab
     setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
       setStatus('success');
       // Reset form fields
       setFormData({
@@ -35,7 +49,7 @@ export const Booking = () => {
         location: '',
         message: ''
       });
-    }, 1800);
+    }, 1500);
   };
 
   return (
