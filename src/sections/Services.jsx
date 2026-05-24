@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 export const Services = () => {
-  const [activeTab, setActiveTab] = useState('wedding');
+  const [activeTab, setActiveTab] = useState('all');
 
   const serviceCategories = [
     {
@@ -79,7 +79,17 @@ export const Services = () => {
     }
   ];
 
+  // Define All Tab category
+  const tabsList = [
+    { id: 'all', label: 'All Categories', icon: <Layers className="w-4 h-4" /> },
+    ...serviceCategories
+  ];
+
+  // Dynamically filter packages
   const activeCategory = serviceCategories.find(cat => cat.id === activeTab);
+  const displayedPackages = activeTab === 'all'
+    ? serviceCategories.flatMap(cat => cat.packages)
+    : activeCategory.packages;
 
   return (
     <section id="services" className="relative w-full py-24 lg:py-32 bg-matte-black">
@@ -104,7 +114,7 @@ export const Services = () => {
 
         {/* 1. INTERACTIVE CATEGORY TABS CONTROLLER */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-16 max-w-3xl mx-auto">
-          {serviceCategories.map((cat) => (
+          {tabsList.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveTab(cat.id)}
@@ -140,7 +150,7 @@ export const Services = () => {
               transition={{ duration: 0.4 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-center"
             >
-              {activeCategory.packages.map((pkg, idx) => (
+              {displayedPackages.map((pkg, idx) => (
                 <motion.div
                   key={pkg.title}
                   initial={{ opacity: 0, y: 15 }}
